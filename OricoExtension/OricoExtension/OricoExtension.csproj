@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{D3A526CE-19CC-4FA6-8ABB-18BDF54F9C79}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="assets\icons\icon128.png" />
+    <Content Include="assets\icons\icon19.png" />
+    <Content Include="assets\icons\icon48.png" />
+    <Content Include="assets\icons\icon64.png" />
+    <Content Include="assets\images\button_red.png" />
+    <Content Include="assets\images\orico_mall_logo.png" />
+    <Content Include="manifest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="page_action\popup.css" />
+    <Content Include="page_action\popup.html" />
+    <TypeScriptCompile Include="common\d.ts\orico.d.ts" />
+    <TypeScriptCompile Include="page_action\popup.ts" />
+    <TypeScriptCompile Include="vendor\d.ts\underscore.d.ts" />
+    <TypeScriptCompile Include="vendor\d.ts\url.d.ts" />
+    <Content Include="vendor\css\cssreset-min.css" />
+    <Content Include="vendor\underscore-min.js" />
+    <Content Include="vendor\url.min.js" />
+    <Content Include="vendor\zepto.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+    <Content Include="orico_mall.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="vendor\underscore-min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="background\background.ts" />
+    <TypeScriptCompile Include="content_scripts\eorico.ts" />
+    <TypeScriptCompile Include="content_scripts\point_gateway.ts" />
+    <TypeScriptCompile Include="common\d.ts\chrome.d.ts" />
+    <TypeScriptCompile Include="vendor\d.ts\zepto.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>OricoExtension</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49371</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49371/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>del $(TargetDir)$(TargetName).*
+
+xcopy $(ProjectDir)assets $(TargetDir)assets /Y /E /I
+xcopy $(ProjectDir)background $(TargetDir)background /Y /E /I
+xcopy $(ProjectDir)content_scripts $(TargetDir)content_scripts /Y /E /I
+xcopy $(ProjectDir)page_action $(TargetDir)page_action /Y /E /I
+xcopy $(ProjectDir)vendor $(TargetDir)vendor /Y /E /I
+
+del $(TargetDir)background\*.ts
+del $(TargetDir)content_scripts\*.ts
+del $(TargetDir)page_action\*.ts
+
+rd $(TargetDir)vendor\d.ts /Q /S
+</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>rd $(TargetDir)assets /Q /S
+rd $(TargetDir)background /Q /S
+rd $(TargetDir)content_scripts /Q /S
+rd $(TargetDir)page_action /Q /S
+rd $(TargetDir)vendor /Q /S
+</PreBuildEvent>
+  </PropertyGroup>
+</Project>

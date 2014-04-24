@@ -1,0 +1,54 @@
+{
+  "name": "Orico Extensions",
+  "description": "オリコの拡張機能",
+  "version": "1.0.0",
+  "author": "MIZUNE Pine",
+  "default_locale": "ja",
+  "manifest_version": 2,
+  "icons": {
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "background": {
+    "scripts": [
+	  "vendor/js/zepto.min.js",
+      "vendor/js/underscore-min.js",
+      "vendor/js/url.min.js",
+	  "background/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://my.orico.co.jp/eorico/*"],
+      "css"    : [],
+      "js"     : [
+        "vendor/js/zepto.min.js",
+        "content_scripts/eorico.js"
+      ],
+      "run_at" : "document_end"
+    },
+    {
+      "matches": ["https://point.orico.co.jp/id/*"],
+      "css"    : [],
+      "js"     : [
+        "vendor/js/zepto.min.js",
+        "content_scripts/point_gateway.js"
+      ],
+      "run_at" : "document_end"
+    }
+  ],
+  "page_action": {
+    "default_icon": "assets/icons/icon19.png",
+    "default_title": "オリコモール",
+    "default_popup": "page_action/popup.html"
+  },
+  "web_accessible_resources": [
+    "assets/images/*",
+    "vendor/js/*"
+  ],
+  "permissions": [
+    "storage",
+    "tabs",
+    "*://*/*"
+  ]
+}
