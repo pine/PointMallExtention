@@ -3,7 +3,6 @@
   "description": "オリコの拡張機能",
   "version": "1.0.0",
   "author": "MIZUNE Pine",
-  "default_locale": "ja",
   "manifest_version": 2,
   "icons": {
     "48": "assets/icons/icon48.png",

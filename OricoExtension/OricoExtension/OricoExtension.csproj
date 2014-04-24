@@ -33,15 +33,16 @@
     <TypeScriptCompile Include="vendor\d.ts\underscore.d.ts" />
     <TypeScriptCompile Include="vendor\d.ts\url.d.ts" />
     <Content Include="vendor\css\cssreset-min.css" />
-    <Content Include="vendor\underscore-min.js" />
-    <Content Include="vendor\url.min.js" />
-    <Content Include="vendor\zepto.min.js" />
+    <Content Include="vendor\js\underscore-min.js" />
+    <Content Include="vendor\js\url.min.js" />
+    <Content Include="vendor\js\zepto.min.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="web.config" />
     <Content Include="orico_mall.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="vendor\js\underscore-min.map" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -50,18 +51,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="vendor\underscore-min.map" />
-  </ItemGroup>
-  <ItemGroup>
     <TypeScriptCompile Include="background\background.ts" />
     <TypeScriptCompile Include="content_scripts\eorico.ts" />
     <TypeScriptCompile Include="content_scripts\point_gateway.ts" />
     <TypeScriptCompile Include="common\d.ts\chrome.d.ts" />
     <TypeScriptCompile Include="vendor\d.ts\zepto.d.ts" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="vendor\js\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
