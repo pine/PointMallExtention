@@ -19,7 +19,7 @@ This is a useful chrome extension for orico card users.
 * Copyright &copy; 2014 MIZUNE Pine.
 
 == See also ==
-* [[OricoMallShopList]]
+* https://github.com/pine613/OricoMallShopList
 
 == Links ==
 * http://www.oricomall.com
