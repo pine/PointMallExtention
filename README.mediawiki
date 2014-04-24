@@ -1,0 +1,25 @@
+= Orico Extension =
+
+This is a useful chrome extension for orico card users.
+
+== Development environment ==
+* Windows 8 64 bit
+* Visual Studio 2013 Update 2 RC
+* TypeScript (ECMAScript 5)
+* Chrome and Opera
+
+== Used library ==
+* [http://zeptojs.com Zepto.js]
+* [http://underscorejs.org Underscore.js]
+* [https://github.com/websanova/js-url url()]
+* [http://yuilibrary.com/yui/docs/cssreset/ YUI 3 CSS Reset]
+
+== License ==
+* MIT License
+* Copyright &copy; 2014 MIZUNE Pine.
+
+== See also ==
+* [[OricoMallShopList]]
+
+== Links ==
+* http://www.oricomall.com
