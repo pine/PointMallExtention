@@ -59,6 +59,9 @@
     <TypeScriptCompile Include="common\d.ts\chrome.d.ts" />
     <TypeScriptCompile Include="vendor\d.ts\zepto.d.ts" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="vendor\js\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
