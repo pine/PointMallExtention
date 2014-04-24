@@ -15,11 +15,13 @@ module orico.background {
         ): void
     {
         // ショップが未取得な場合
-        if (OricoMallShops == null) {
+        if (!OricoMallShops) {
             // 遅延して実行
             _.delay(() => {
                 checkPageAction(tabId, changeInfo, tab);
             }, 10);
+
+            return;
         }
 
         // 現在のホスト名を取得
