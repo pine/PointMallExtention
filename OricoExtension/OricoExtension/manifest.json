@@ -1,7 +1,7 @@
 {
-  "name": "Orico Extensions",
-  "description": "オリコの拡張機能",
-  "version": "1.0.0",
+  "name": "Orico Extension",
+  "description": "オリコカードユーザーのための拡張機能",
+  "version": "1.0.0.1",
   "author": "MIZUNE Pine",
   "manifest_version": 2,
   "icons": {
