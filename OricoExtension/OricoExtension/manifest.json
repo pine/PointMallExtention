@@ -1,7 +1,7 @@
 {
   "name": "Orico Extension",
   "description": "オリコカードユーザーのための拡張機能",
-  "version": "1.0.0.1",
+  "version": "1.1.0.0",
   "author": "MIZUNE Pine",
   "manifest_version": 2,
   "icons": {
@@ -13,6 +13,7 @@
 	  "vendor/js/zepto.min.js",
       "vendor/js/underscore-min.js",
       "vendor/js/url.min.js",
+      "common/common.js",
 	  "background/background.js"
     ]
   },

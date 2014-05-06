@@ -4,8 +4,10 @@
 // <reference path="../common/d.ts/chrome.d.ts" />
 // <reference path="../common/d.ts/orico.d.ts" />
 
+declare var POINT_MALL_SHOPS_JSON_URL: string;
+
 module orico.background {
-    var OricoMallShopPath = "../orico_mall.json";
+    var OricoMallShopPath = POINT_MALL_SHOPS_JSON_URL;
     var OricoMallShops: orico.mall.Shop[] = null;
 
     function checkPageAction(
@@ -43,11 +45,28 @@ module orico.background {
         
     }
 
-    function getShopJSON(): void {
+    // リモートから最新版を取得する
+    function getShopJsonFromRemote(callback: (shops: orico.mall.Shop[]) => void): void {
         $.getJSON(OricoMallShopPath, (data, status, xhr) => {
             if (_.isArray(data)) {
-                OricoMallShops = <orico.mall.Shop[]> data;
-                chrome.storage.local.set({ oricoMallShops: data });
+                callback(<orico.mall.Shop[]> data);
+            }
+        });
+    }
+
+    function getShopJSON(): void {
+        // リモートから最新版を取得
+        getShopJsonFromRemote((shops) => {
+            OricoMallShops = shops;
+            chrome.storage.local.set({ oricoMallShops: shops });
+        });
+
+        // ローカルストレージから取得
+        chrome.storage.local.get((items) => {
+            var shops = <orico.mall.Shop[]> items["oricoMallShops"];
+
+            if (!OricoMallShops && shops) {
+                OricoMallShops = shops;
             }
         });
     }

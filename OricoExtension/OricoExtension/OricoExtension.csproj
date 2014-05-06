@@ -28,6 +28,7 @@
     </Content>
     <Content Include="page_action\popup.css" />
     <Content Include="page_action\popup.html" />
+    <TypeScriptCompile Include="common\common.ts" />
     <TypeScriptCompile Include="common\d.ts\orico.d.ts" />
     <TypeScriptCompile Include="page_action\popup.ts" />
     <TypeScriptCompile Include="vendor\d.ts\underscore.d.ts" />

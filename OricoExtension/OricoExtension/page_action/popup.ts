@@ -27,7 +27,7 @@ module orico.pageAction {
                 var label = $('<label />');
 
                 $('<input type="radio" name="shop" />')
-                    .val(shop.oricoMallUrl)
+                    .val(shop.pointMallUrl)
                     .appendTo(label);
 
                 label.append(shop.name);

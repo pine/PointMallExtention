@@ -5,7 +5,7 @@ declare module orico {
             name: string;
             url: string;
             hostName: string;
-            oricoMallUrl: string;
+            pointMallUrl: string;
         }
     }
 }
