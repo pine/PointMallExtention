@@ -30,7 +30,6 @@
     <TypeScriptCompile Include="common\orico\common.ts" />
     <TypeScriptCompile Include="common\d.ts\pointMall.d.ts" />
     <TypeScriptCompile Include="page_action\popup.ts" />
-    <TypeScriptCompile Include="vendor\d.ts\node.d.ts" />
     <TypeScriptCompile Include="vendor\d.ts\underscore.d.ts" />
     <TypeScriptCompile Include="vendor\d.ts\url.d.ts" />
     <Content Include="vendor\css\cssreset-min.css" />
