@@ -19,18 +19,28 @@ p {
 }
 
 .button {
-    display: inline-block;
-	width: 160px;
+    display: table-cell;
+    overflow: hidden;
+    padding: 0 20px;
+	width: 120px;
 	height: 60px;
 	text-align: center;
-	line-height: 60px;
+    vertical-align: middle;
 	font-size: 13px;
 }
 
 .login {
-	background-image: url(../assets/images/button_red.png);
 	color: white;
 	cursor: pointer;
+    
+}
+
+.orico .login {
+    background-image: url(../assets/images/button_red.png);
+}
+
+.aeon .login {
+    background-image: url(../assets/images/button_blue.png);
 }
 
 .shop-area {

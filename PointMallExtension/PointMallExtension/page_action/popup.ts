@@ -68,4 +68,6 @@ module credit.pointMall.pageAction {
     // ポイントモール固有値を設定
     $('.point-mall-name').text(POINT_MALL_NAME);
     $('.point-mall-link').attr('href', POINT_MALL_URL);
+
+    $("body").addClass(CREDIT_CARD_ISSUER.toLowerCase());
 }
