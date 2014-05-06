@@ -17,15 +17,21 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="assets\icons\aeon\icon128.png" />
+    <Content Include="assets\icons\aeon\icon19.png" />
+    <Content Include="assets\icons\aeon\icon48.png" />
+    <Content Include="assets\icons\aeon\icon64.png" />
     <Content Include="assets\icons\orico\icon128.png" />
     <Content Include="assets\icons\orico\icon19.png" />
     <Content Include="assets\icons\orico\icon48.png" />
     <Content Include="assets\icons\orico\icon64.png" />
+    <Content Include="assets\images\aeon\logo.png" />
     <Content Include="assets\images\button_red.png" />
     <Content Include="assets\images\orico\logo.png" />
     <Content Include="manifest\orico.json" />
     <Content Include="page_action\popup.css" />
     <Content Include="page_action\popup.html" />
+    <TypeScriptCompile Include="common\aeon\common.ts" />
     <TypeScriptCompile Include="common\d.ts\common.d.ts" />
     <TypeScriptCompile Include="common\orico\common.ts" />
     <TypeScriptCompile Include="common\d.ts\pointMall.d.ts" />
@@ -40,6 +46,7 @@
   <ItemGroup>
     <Content Include="web.config" />
     <Content Include="vendor\js\underscore-min.map" />
+    <Content Include="manifest\aeon.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -64,14 +71,14 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Orico'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\</OutputPath>
+    <OutputPath>OricoExtension\</OutputPath>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Aeon'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\</OutputPath>
+    <OutputPath>AeonExtension\</OutputPath>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
