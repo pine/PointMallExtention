@@ -104,12 +104,15 @@ xcopy $(ProjectDir)background $(TargetDir)background /Y /E /I
 xcopy $(ProjectDir)content_scripts $(TargetDir)content_scripts /Y /E /I
 xcopy $(ProjectDir)page_action $(TargetDir)page_action /Y /E /I
 xcopy $(ProjectDir)vendor $(TargetDir)vendor /Y /E /I
+xcopy $(ProjectDir)common $(TargetDir)common /Y /E /I
 
 del $(TargetDir)background\*.ts
 del $(TargetDir)content_scripts\*.ts
 del $(TargetDir)page_action\*.ts
+del $(TargetDir)common\*.ts
 
 rd $(TargetDir)vendor\d.ts /Q /S
+rd $(TargetDir)common\d.ts /Q /S
 </PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
