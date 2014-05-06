@@ -40,9 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="web.config" />
-    <Content Include="orico_mall.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="vendor\js\underscore-min.map" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
