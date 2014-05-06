@@ -1,4 +1,4 @@
-﻿/// <reference path="../vendor/d.ts/zepto.d.ts" />
+﻿/// <reference path="../../vendor/d.ts/zepto.d.ts" />
 
 module orico {
     var title = document.title;
