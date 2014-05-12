@@ -1,7 +1,7 @@
 ﻿// <reference path="../vendor/d.ts/url.d.ts" />
 // <reference path="../vendor/d.ts/underscore.d.ts" />
 // <reference path="../vendor/d.ts/zepto.d.ts" />
-// <reference path="../common/d.ts/chrome.d.ts" />
+// <reference path="../vendor/d.ts/chrome.d.ts" />
 // <reference path="../common/d.ts/pointMall.d.ts" />
 
 declare var POINT_MALL_SHOPS_JSON_URL: string;
@@ -12,7 +12,6 @@ module credit.pointMall.background {
 
     function checkPageAction(
         tabId: number,
-        changeInfo: any,
         tab: chrome.tabs.Tab
         ): void
     {
@@ -20,7 +19,7 @@ module credit.pointMall.background {
         if (!PointMallShops) {
             // 遅延して実行
             _.delay(() => {
-                checkPageAction(tabId, changeInfo, tab);
+                checkPageAction(tabId, tab);
             }, 10);
 
             return;
@@ -41,8 +40,8 @@ module credit.pointMall.background {
         }
 
         // ページアクションを表示
+        chrome.pageAction.setIcon({ tabId: tabId, path: chrome.extension.getURL('/assets/icons/icon19.png') });
         chrome.pageAction.show(tabId);
-        
     }
 
     // リモートから最新版を取得する
@@ -72,5 +71,34 @@ module credit.pointMall.background {
     }
     
     getShopJSON();
-    chrome.tabs.onUpdated.addListener(checkPageAction);
+
+    chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+        if (changeInfo.url) {
+            tab.url = changeInfo.url;
+        }
+
+        checkPageAction(tabId, tab);
+    });
+
+    chrome.tabs.onCreated.addListener((tab) => {
+        checkPageAction(tab.id, tab);
+    });
+
+    chrome.tabs.onMoved.addListener((tabId, moveInfo) => {
+        chrome.tabs.get(tabId, (tab) => {
+            checkPageAction(tabId, tab);
+        });
+    });
+
+    chrome.tabs.onAttached.addListener((tabId, attachInfo) => {
+        chrome.tabs.get(tabId, (tab) => {
+            checkPageAction(tabId, tab);
+        });
+    });
+
+    chrome.tabs.onReplaced.addListener((addedTabId, removedTabId) => {
+        chrome.tabs.get(addedTabId, (tab) => {
+            checkPageAction(addedTabId, tab);
+        });
+    });
 }
