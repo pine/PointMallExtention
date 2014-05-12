@@ -1,7 +1,7 @@
 {
   "name": "イオンカード ときめきポイントTOWN",
   "description": "イオンカードユーザーのための拡張機能",
-  "version": "1.0.0.0",
+  "version": "1.0.1.0",
   "author": "MIZUNE Pine",
   "manifest_version": 2,
   "icons": {
