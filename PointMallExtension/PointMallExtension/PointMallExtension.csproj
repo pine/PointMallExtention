@@ -36,6 +36,7 @@
     <TypeScriptCompile Include="common\orico\common.ts" />
     <TypeScriptCompile Include="common\d.ts\pointMall.d.ts" />
     <TypeScriptCompile Include="page_action\popup.ts" />
+    <TypeScriptCompile Include="vendor\d.ts\chrome.d.ts" />
     <TypeScriptCompile Include="vendor\d.ts\underscore.d.ts" />
     <TypeScriptCompile Include="vendor\d.ts\url.d.ts" />
     <Content Include="vendor\css\cssreset-min.css" />
@@ -58,7 +59,6 @@
     <TypeScriptCompile Include="background\background.ts" />
     <TypeScriptCompile Include="content_scripts\orico\eorico.ts" />
     <TypeScriptCompile Include="content_scripts\orico\point_gateway.ts" />
-    <TypeScriptCompile Include="common\d.ts\chrome.d.ts" />
     <TypeScriptCompile Include="vendor\d.ts\zepto.d.ts" />
   </ItemGroup>
   <ItemGroup />
