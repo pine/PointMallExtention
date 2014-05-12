@@ -2,7 +2,7 @@
 // <reference path="../vendor/d.ts/underscore.d.ts" />
 // <reference path="../vendor/d.ts/zepto.d.ts" />
 // <reference path="../vendor/d.ts/knockout.d.ts" />
-// <reference path="../common/d.ts/chrome.d.ts" />
+// <reference path="../vendor/d.ts/chrome.d.ts" />
 // <reference path="../common/d.ts/pointMall.d.ts" />
 // <reference path="../common/d.ts/common.d.ts" />
 
