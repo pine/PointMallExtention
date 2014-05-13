@@ -3,8 +3,8 @@
 This is a useful chrome extension for credit card users.
 
 == Supported credit card issuers and point malls ==
-* Orient Corporation
-* Aeon Credit Service (planned)
+* Orient Corporation (2013/04/23)
+* Aeon Credit Service (2013/05/11)
 * Sumitomo Mitsui Card Company, Limited (planned)
 
 == Development environment ==
