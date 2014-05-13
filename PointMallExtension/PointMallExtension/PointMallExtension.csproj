@@ -25,6 +25,10 @@
     <Content Include="assets\icons\orico\icon19.png" />
     <Content Include="assets\icons\orico\icon48.png" />
     <Content Include="assets\icons\orico\icon64.png" />
+    <Content Include="assets\icons\smbc\icon128.png" />
+    <Content Include="assets\icons\smbc\icon19.png" />
+    <Content Include="assets\icons\smbc\icon48.png" />
+    <Content Include="assets\icons\smbc\icon64.png" />
     <Content Include="assets\images\aeon\logo.png" />
     <Content Include="assets\images\button_red.png" />
     <Content Include="assets\images\orico\logo.png" />
@@ -35,6 +39,7 @@
     <TypeScriptCompile Include="common\d.ts\common.d.ts" />
     <TypeScriptCompile Include="common\orico\common.ts" />
     <TypeScriptCompile Include="common\d.ts\pointMall.d.ts" />
+    <TypeScriptCompile Include="common\smbc\common.ts" />
     <TypeScriptCompile Include="page_action\popup.ts" />
     <TypeScriptCompile Include="vendor\d.ts\chrome.d.ts" />
     <TypeScriptCompile Include="vendor\d.ts\underscore.d.ts" />
@@ -63,9 +68,7 @@
     <TypeScriptCompile Include="vendor\d.ts\zepto.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="assets\icons\smbc\" />
     <Folder Include="assets\images\smbc\" />
-    <Folder Include="common\smbc\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
