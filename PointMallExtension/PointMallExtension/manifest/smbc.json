@@ -1,7 +1,7 @@
 {
-  "name": "イオンカード ときめきポイントTOWN",
-  "description": "イオンカードユーザーのための拡張機能",
-  "version": "1.0.1.0",
+  "name": "三井住友VISAカード ポイントUPモール",
+  "description": "三井住友VISAカードユーザーのための拡張機能",
+  "version": "1.0.0.0",
   "author": "MIZUNE Pine",
   "manifest_version": 2,
   "icons": {
@@ -23,7 +23,7 @@
   ],
   "page_action": {
     "default_icon": "assets/icons/icon19.png",
-    "default_title": "ときめきポイントTOWN",
+    "default_title": "ポイントUPモール",
     "default_popup": "page_action/popup.html"
   },
   "web_accessible_resources": [
