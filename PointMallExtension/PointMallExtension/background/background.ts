@@ -25,6 +25,11 @@ module credit.pointMall.background {
             return;
         }
 
+        // URL がまだ存在しない場合は処理を中断する
+        if (!tab.url) {
+            return;
+        }
+
         // 現在のホスト名を取得
         var hostname = url('hostname', tab.url);
 
