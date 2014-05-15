@@ -10,6 +10,41 @@ module credit.pointMall.background {
     var PointMallShopPath = POINT_MALL_SHOPS_JSON_URL;
     var PointMallShops: Shop[] = null;
 
+    function addPageActionChecker(
+        listener: (tabId: number, tab: chrome.tabs.Tab) => void
+        ): void {
+
+        chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+            if (changeInfo.url) {
+                tab.url = changeInfo.url;
+            }
+
+            listener(tabId, tab);
+        });
+
+        chrome.tabs.onCreated.addListener((tab) => {
+            listener(tab.id, tab);
+        });
+
+        chrome.tabs.onMoved.addListener((tabId, moveInfo) => {
+            chrome.tabs.get(tabId, (tab) => {
+                listener(tabId, tab);
+            });
+        });
+
+        chrome.tabs.onAttached.addListener((tabId, attachInfo) => {
+            chrome.tabs.get(tabId, (tab) => {
+                listener(tabId, tab);
+            });
+        });
+
+        chrome.tabs.onReplaced.addListener((addedTabId, removedTabId) => {
+            chrome.tabs.get(addedTabId, (tab) => {
+                listener(addedTabId, tab);
+            });
+        });
+    }
+
     function checkPageAction(
         tabId: number,
         tab: chrome.tabs.Tab
@@ -76,34 +111,5 @@ module credit.pointMall.background {
     }
     
     getShopJSON();
-
-    chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-        if (changeInfo.url) {
-            tab.url = changeInfo.url;
-        }
-
-        checkPageAction(tabId, tab);
-    });
-
-    chrome.tabs.onCreated.addListener((tab) => {
-        checkPageAction(tab.id, tab);
-    });
-
-    chrome.tabs.onMoved.addListener((tabId, moveInfo) => {
-        chrome.tabs.get(tabId, (tab) => {
-            checkPageAction(tabId, tab);
-        });
-    });
-
-    chrome.tabs.onAttached.addListener((tabId, attachInfo) => {
-        chrome.tabs.get(tabId, (tab) => {
-            checkPageAction(tabId, tab);
-        });
-    });
-
-    chrome.tabs.onReplaced.addListener((addedTabId, removedTabId) => {
-        chrome.tabs.get(addedTabId, (tab) => {
-            checkPageAction(addedTabId, tab);
-        });
-    });
+    addPageActionChecker(checkPageAction);
 }
