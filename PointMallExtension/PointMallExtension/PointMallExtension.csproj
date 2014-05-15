@@ -30,6 +30,7 @@
     <Content Include="assets\icons\smbc\icon48.png" />
     <Content Include="assets\icons\smbc\icon64.png" />
     <Content Include="assets\images\aeon\logo.png" />
+    <Content Include="assets\images\button_blue.png" />
     <Content Include="assets\images\button_red.png" />
     <Content Include="assets\images\orico\logo.png" />
     <Content Include="manifest\orico.json" />
