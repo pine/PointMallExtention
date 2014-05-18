@@ -7,6 +7,13 @@ This is a useful chrome extension for credit card users.
 * Aeon Credit Service (2013/05/11)
 * Sumitomo Mitsui Card Company, Limited (planned)
 
+== Install ==
+* Orico Extension (Orient Corporation)
+https://chrome.google.com/webstore/detail/orico-extension/mgipfpmhgmdldipdgnblmmeopfjafclk?hl=ja
+
+* イオンカード ときめきポイントTOWN (Aeon Credit Service)
+https://chrome.google.com/webstore/detail/imcafbgifioikehldallgbmdafcimkpb?hl=ja
+
 == Development environment ==
 * Windows 8 64 bit
 * Visual Studio 2013 Update 2 RC
