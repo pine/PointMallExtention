@@ -43,6 +43,10 @@ p {
     background-image: url(../assets/images/button_blue.png);
 }
 
+.smbc .login {
+    background-image: url(../assets/images/button_dark_green.png);
+}
+
 .shop-area {
     margin: 0 0 0 170px;
     width: 230px;

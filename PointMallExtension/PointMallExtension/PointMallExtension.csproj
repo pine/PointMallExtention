@@ -32,6 +32,7 @@
     <Content Include="assets\images\aeon\logo.png" />
     <Content Include="assets\images\button_blue.png" />
     <Content Include="assets\images\button_red.png" />
+    <Content Include="assets\images\button_dark_green.png" />
     <Content Include="assets\images\orico\logo.png" />
     <Content Include="manifest\orico.json" />
     <Content Include="page_action\popup.css" />

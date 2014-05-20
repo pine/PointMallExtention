@@ -70,4 +70,10 @@ module credit.pointMall.pageAction {
     $('.point-mall-link').attr('href', POINT_MALL_URL);
 
     $("body").addClass(CREDIT_CARD_ISSUER.toLowerCase());
+
+    switch (CREDIT_CARD_ISSUER.toLowerCase()) {
+        case 'smbc':
+            $('.button .point-mall-name').after('<br>');
+            break;
+    }
 }
