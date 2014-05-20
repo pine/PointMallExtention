@@ -9,7 +9,7 @@ This is a useful chrome extension for credit card users.
 
 == Install ==
 * Orico Extension (Orient Corporation)
-https://chrome.google.com/webstore/detail/orico-extension/mgipfpmhgmdldipdgnblmmeopfjafclk?hl=ja
+https://chrome.google.com/webstore/detail/mgipfpmhgmdldipdgnblmmeopfjafclk?hl=ja
 
 * イオンカード ときめきポイントTOWN (Aeon Credit Service)
 https://chrome.google.com/webstore/detail/imcafbgifioikehldallgbmdafcimkpb?hl=ja
