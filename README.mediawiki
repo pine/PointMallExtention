@@ -3,9 +3,9 @@
 This is a useful chrome extension for credit card users.
 
 == Supported credit card issuers and point malls ==
-* Orient Corporation (2013/04/23)
-* Aeon Credit Service (2013/05/11)
-* Sumitomo Mitsui Card Company, Limited (planned)
+* Orient Corporation (2014/04/23)
+* Aeon Credit Service (2014/05/11)
+* Sumitomo Mitsui Card Company, Limited (2014/05/20)
 
 == Install ==
 * Orico Extension (Orient Corporation)
@@ -13,6 +13,9 @@ https://chrome.google.com/webstore/detail/mgipfpmhgmdldipdgnblmmeopfjafclk?hl=ja
 
 * イオンカード ときめきポイントTOWN (Aeon Credit Service)
 https://chrome.google.com/webstore/detail/imcafbgifioikehldallgbmdafcimkpb?hl=ja
+
+* 三井住友VISAカード ポイントUPモール (Sumitomo Mitsui Card Company, Limited)
+https://chrome.google.com/webstore/detail/jgdfgkcdpfjnaghkfggmgjbjnaodfomj?hl=ja
 
 == Development environment ==
 * Windows 8 64 bit
