@@ -21,7 +21,7 @@ https://chrome.google.com/webstore/detail/jgdfgkcdpfjnaghkfggmgjbjnaodfomj?hl=ja
 * Windows 8 64 bit
 * Visual Studio 2013 Update 2 RC
 * TypeScript (ECMAScript 5)
-* Chrome
+* Chrome and Opera (Blink)
 
 == Used library ==
 * [http://zeptojs.com Zepto.js]
